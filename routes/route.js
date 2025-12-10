@@ -37,7 +37,7 @@ routes.get("/api/:date", function (req, res) {
     }
     else {
         const unix = Date.parse(date)
-
+        console.log("test")
         const time = new Date(unix).toUTCString()
 
         return res.json({ "unix": Number(unix), "utc": time });
